@@ -66,19 +66,24 @@ class HomeFragment : BaseBindingFragment<FragmentHomeBinding>() {
             when {
                 state.isLoading -> {
                     displayRecyclers(false)
-                    (activity as MainActivity).displayCustomErrorView(false)
-                    (activity as MainActivity).displayProgress(true)
+                    (activity as MainActivity).apply {
+                        displayCustomErrorView(false)
+                        displayProgress(true)
+                    }
                 }
                 state.error != "" -> {
                     displayRecyclers(false)
-                    (activity as MainActivity).displayProgress(false)
-                    (activity as MainActivity).displayCustomErrorView(true)
-                    (activity as MainActivity).getCustomErrorView().setError(state.error)
-
+                    (activity as MainActivity).apply {
+                        displayProgress(false)
+                        displayCustomErrorView(true)
+                        getCustomErrorView().setError(state.error)
+                    }
                 }
                 else -> {
-                    (activity as MainActivity).displayCustomErrorView(false)
-                    (activity as MainActivity).displayProgress(false)
+                    (activity as MainActivity).apply {
+                        displayCustomErrorView(false)
+                        displayProgress(false)
+                    }
                     displayRecyclers(true)
                     initPopularRecycler(state.popularMovies)
                     initTrailersRecycler(state.nowPlayingMovies)
