@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">The Movie</string>
+    <string name="home">home</string>
+    <string name="category">Category</string>
+    <string name="my_list">My List</string>
+    <string name="search">Search</string>
+    <string name="my_account">My Account</string>
+    <string name="what_is_popular">What\'s Popular</string>
+    <string name="on_tv">On Tv</string>
+    <string name="on_movie">In Theaters</string>
+    <string name="trending">Trending</string>
+    <string name="today">Today</string>
+    <string name="this_week">This Week</string>
+    <string name="latest_trailers">Latest Trailers</string>
+    <string name="reload">Reload</string>
+</resources>
