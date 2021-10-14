@@ -3,7 +3,7 @@
 Using:
 - Kotlin
 - MVVM architectural pattern
-- clean Architecture
+- clean Code
 - Hilt library 
 - Coroutines
 - Retrofit
